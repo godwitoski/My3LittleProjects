@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de fotos por color</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="neonText">Buscador de imagenes por color</h1>
+        <form class="search">
+            <input type="search" class="commonForm" name="query" placeholder="Escriba lo que quiere buscar" required>
+            <select name="color" class="commonForm" required>
+                <option value="">Seleccione el color...</option>
+                <option value="violet">Violeta</option>
+                <option value="black">Negro</option>
+                <option value="white">Blanco</option>
+                <option value="yellow">Amarillo</option>
+                <option value="orange">Naranja</option>
+                <option value="red">Rojo</option>
+                <option value="brown">Marrón</option>
+                <option value="gray">Gris</option>
+                <option value="green">Verde</option>
+                <option value="blue">Azul</option>
+                <option value="turquoise">Turquesa</option>
+                <option value="pink">Rosa</option>
+
+            </select>
+            <button class="btn-search">Buscar</button>
+        </form>
+    </header>
+
+    <section class="app">
+        <p>Usa el buscador para encontrar imágenes. Para mejor resultado escribe el elemento en inglés</p>
+
+    </section>
+    <a href="../index.html" class="btn-flotante">Página principal</a>
+
+</body>
+
+</html>

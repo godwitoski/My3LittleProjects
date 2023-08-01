@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url("../btn.css");
+:root{
+    --color-mainWhite:#fff;
+    --color-blue:#4070F4;
+    --color-blueWhite:#6E94F7;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*----------*\
+     BODY
+\*----------*/
+body{
+    text-align: center;
+    background: linear-gradient(black, gray);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*-----------*\
+     SLIDE
+\*-----------*/
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.slide-content{
+    margin: 0 40px;
+    overflow-x: hidden;
+    border-radius:25px ;
+}
+
+/*-------------------*\
+    CARD/IMG CONTENT
+\*------------------*/
+.card{
+    border-radius: 25px;
+    background-color: var(--color-mainWhite);
+}
+
+.image-content, 
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+.card-content{
+    min-height: 265px;
+}
+
+.image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+
+
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: var(--color-mainWhite);
+    padding: 3px;
+}
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--color-blue);
+}
+
+/*----------------*\
+    SPAN OVERLAY
+\*----------------*/
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-blue);
+    border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+content: "";
+position: absolute;
+right: 0;
+bottom: -40px;
+height: 40px;
+width: 40px;
+background-color: var(--color-blue);
+}
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: var(--color-mainWhite);
+}
+/*-----------------------*\
+    INSIDE CARD CONTENT
+\*-----------------------*/
+
+.name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+.description{
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+.button{
+    border: none;
+    font-size: 16px;
+    color: var(--color-mainWhite);
+    padding: 8px 16px;
+    background-color: var(--color-blue);
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition:all 0.3s ease;
+}
+.button:hover{
+    background: #265DF2;
+}
+/*------------------*\
+    SWIPER BUTTONS
+\*------------------*/
+
+.swiper-navBtn{
+    color: var(--color-blueWhite);
+    transition: color 0.3s ease;
+}
+
+.swiper-navBtn:hover{
+    color: var(--color-blue);
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+    font-size: 40px;
+}
+.swiper-button-next{
+    right: 0;
+}
+
+.swiper-button-prev{
+    left:  0;
+}
+.swiper-pagination-bullet{
+    background-color: var(--color-blueWhite);
+    opacity: 1;
+}
+.swiper-pagination-bullet-active{
+    background-color: var(--color-blue);
+}
+
+@media screen and (max-width:768px) {
+    .swiper-button-next, 
+    .swiper-button-prev{
+        display: none;
+    }
+    .slide-content{
+        margin: 0 10px;
+    }
+}
